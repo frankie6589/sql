@@ -4,23 +4,33 @@ USE ORG;
 
 CREATE TABLE Worker(
 	WORKER_ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    FIRST_NAME CHAR(25),
-    LAST_NAME CHAR(25),
-    SALARY INT(15),
+    FIRST_NAME CHAR(35),
+    LAST_NAME CHAR(35),
+    SALARY INT(5),
     JOINING_DATE DATETIME,
-    DEPARTMENT CHAR(25)
+    DEPARTMENT CHAR(35)
 );
 
 INSERT INTO Worker
 	(WORKER_ID, FIRST_NAME, LAST_NAME, SALARY, JOINING_DATE, DEPARTMENT) VALUES
-		(001, 'Anson', 'Tang', 100000, '14-02-20 09.00.00', 'HR'),
-		(002, 'Amy', 'Chan', 80000, '14-06-11 09.00.00', 'Admin'),
-		(003, 'Bob', 'Li', 300000, '14-02-20 09.00.00', 'HR'),
-		(004, 'David', 'Lam', 500000, '14-02-20 09.00.00', 'Admin'),
-		(005, 'Pika', 'Chu', 500000, '14-06-11 09.00.00', 'Admin'),
-		(006, 'Bell', 'Chan', 200000, '14-06-11 09.00.00', 'Account'),
-		(007, 'Hugo', 'Lam', 75000, '14-01-20 09.00.00', 'Account'),
-		(008, 'John', 'Cheung', 90000, '14-04-11 09.00.00', 'Admin');
+		(001, 'David', 'Doe', 950000, '2014-02-20 09:00:00', 'Finance'),
+		(002, 'Michael', 'Smith', 90000, '2014-02-20 09:00:00', 'Executive'),
+		(003, 'Tom', 'Lee', 90000, '2014-02-20 09:00:00', 'Sales'),
+		(004, 'James', 'Johnson', 85000, '2014-02-20 09:00:00', 'Supply Chain'),
+		(005, 'Ivan', 'Watson', 80000, '2014-02-20 09:00:00', 'Operations'),
+		(006, 'John', 'Kim', 80000, '2014-02-20 09:00:00', 'Engineering'),
+		(007, 'John', 'Chen', 80000, '2014-02-20 09:00:00', 'Engineering'),
+		(008, 'Kevin', 'White', 80000, '2014-02-20 09:00:00', 'Sales'),
+		(009, 'Jane', 'Brown', 75000, '2014-02-20 09:00:00', 'Executive'),
+		(010, 'Lisa', 'Johnson', 75000, '2014-02-20 09:00:00', 'Finance'),
+		(011, 'Charles', 'Nguyen', 72000, '2014-02-20 09:00:00', 'IT'),
+		(012, 'Zachary', 'Harris', 72000, '2014-02-20 09:00:00', 'Marketing'),
+		(013, 'Lily', 'Tran', 70000, '2014-02-20 09:00:00', 'Operations'),
+		(014, 'Emma', 'Lopez', 68000, '2014-02-20 09:00:00', 'Human Resources'),
+		(015, 'Samantha', 'Gonzalez', 68000, '2014-02-20 09:00:00', 'Sales'),
+		(016, 'Melissa', 'Perez', 65000, '2014-02-20 09:00:00', 'Customer Service'),
+		(017, 'Jessica', 'Madercod', 60000, '2014-02-20 09:00:00', 'Executive'),
+		(018, 'Frank', 'Wong', 33000, '2014-02-20 09:00:00', 'Sales');
 
 CREATE TABLE Bonus (
 	WORKER_REF_ID INT,
@@ -41,7 +51,7 @@ INSERT INTO Bonus
 
 CREATE TABLE Title (
 	WORKER_REF_ID INT,
-	WORKER_TITLE CHAR(25),
+	WORKER_TITLE CHAR(35),
 	AFFECTED_FROM DATETIME,
 	FOREIGN KEY (WORKER_REF_ID)
 		REFERENCES Worker(WORKER_ID)
@@ -50,14 +60,24 @@ CREATE TABLE Title (
 
 INSERT INTO Title
 	(WORKER_REF_ID, WORKER_TITLE, AFFECTED_FROM) VALUES
- (001, 'Manager', '2016-02-20 00:00:00'),
- (002, 'Executive', '2016-06-11 00:00:00'),
- (008, 'Executive', '2016-06-11 00:00:00'),
- (005, 'Manager', '2016-06-11 00:00:00'),
- (004, 'Asst. Manager', '2016-06-11 00:00:00'),
- (007, 'Executive', '2016-06-11 00:00:00'),
- (006, 'Lead', '2016-06-11 00:00:00'),
- (003, 'Lead', '2016-06-11 00:00:00');
+		(001, 'Accountant', '2014-02-20 00:00:00'),
+		(002, 'Assistant Manager', '2014-02-20 00:00:00'),
+		(003, 'Sales Manager', '2014-02-20 00:00:00'),
+		(004, 'Supply Chain Manager', '2014-02-20 00:00:00'),
+		(005, 'Operations Manager', '2014-02-20 00:00:00'),
+		(006, 'Lead Engineer', '2014-02-20 00:00:00'),
+		(007, 'Senior Engineer', '2014-02-20 00:00:00'),
+		(008, 'Salesperson', '2014-02-20 00:00:00'),
+		(009, 'Manager', '2014-02-20 00:00:00'),
+		(010, 'Financial Analyst', '2014-02-20 00:00:00'),
+		(011, 'Software Developer', '2014-02-20 00:00:00'),
+		(012, 'Marketing Associate', '2014-02-20 00:00:00'),
+		(013, 'Operations Supervisor', '2014-02-20 00:00:00'),
+		(014, 'Marketing Specialist', '2014-02-20 00:00:00'),
+		(015, 'Sales Manager', '2014-02-20 00:00:00'),
+		(016, 'Customer Service Representative', '2014-02-20 00:00:00'),
+		(017, 'CEO', '2014-02-20 00:00:00'),
+		(018, 'Salesperson', '2014-02-20 00:00:00');
 
 
 SELECT Title.WORKER_TITLE, Worker.FIRST_NAME, Worker.SALARY

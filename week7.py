@@ -5,7 +5,7 @@ import pandas as pd
 #the database name is ORG
 
 #IMPORTANT: type your student password below
-connection = pymysql.connect(host='3.106.121.54', user='student', password='xccelerate', database='org', port=3005)
+connection = pymysql.connect(host='127.0.0.1', user='root', password='', database='org', port=3306)
 
 
 # IMPORTANT: the table name is CASE SENSITIVE
@@ -36,6 +36,7 @@ connection = pymysql.connect(host='3.106.121.54', user='student', password='xcce
 14  Gonzalez
 15     Perez
 16  Madercod
+17      Wong
 '''
 
 def question1():
@@ -90,14 +91,15 @@ print(question2())
 6        Jane   75000
 7     Jessica   60000
 8        John   80000
-9       Kevin   80000
-10       Lily   70000
-11       Lisa   75000
-12    Melissa   65000
-13    Michael   90000
-14   Samantha   68000
-15        Tom   90000
-16    Zachary   72000
+9        John   80000
+10      Kevin   80000
+11       Lily   70000
+12       Lisa   75000
+13    Melissa   65000
+14    Michael   90000
+15   Samantha   68000
+16        Tom   90000
+17    Zachary   72000
 '''
 
 def question3():
@@ -116,16 +118,15 @@ print(question3())
 # expected output(should be a dataframe):
 
 '''
-         DEPARTMENT  WORKER_NUM
-0         Executive           1
-1      Supply Chain           1
-2           Finance           1
+0      Supply Chain           1
+1                IT           1
+2         Marketing           1
 3   Human Resources           1
-4                IT           1
-5       Engineering           2
-6         Marketing           2
-7        Operations           2
-8  Customer Service           2
+4  Customer Service           1
+5           Finance           2
+6        Operations           2
+7       Engineering           2
+8         Executive           2
 9             Sales           4
 '''
 

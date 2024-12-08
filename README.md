@@ -1,4 +1,3 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/xiG6Hhkb)
 # SQL Assessment
 
 SQL Schema
@@ -33,6 +32,7 @@ Expected output (should be a dataframe):
 14  Gonzalez
 15     Perez
 16  Madercod
+17      Wong
 ```
 
 
@@ -69,14 +69,15 @@ Expected output (should be a dataframe):
 6        Jane   75000
 7     Jessica   60000
 8        John   80000
-9       Kevin   80000
-10       Lily   70000
-11       Lisa   75000
-12    Melissa   65000
-13    Michael   90000
-14   Samantha   68000
-15        Tom   90000
-16    Zachary   72000
+9        John   80000
+10      Kevin   80000
+11       Lily   70000
+12       Lisa   75000
+13    Melissa   65000
+14    Michael   90000
+15   Samantha   68000
+16        Tom   90000
+17    Zachary   72000
 ```
 
 ##### Problem 4: Write an SQL query to fetch no. of workers for each department in the ascending order of number of worker.
@@ -86,15 +87,15 @@ Expected output (should be a dataframe):
 
 ```
          DEPARTMENT  WORKER_NUM
-0         Executive           1
-1      Supply Chain           1
-2           Finance           1
+0      Supply Chain           1
+1                IT           1
+2         Marketing           1
 3   Human Resources           1
-4                IT           1
-5       Engineering           2
-6         Marketing           2
-7        Operations           2
-8  Customer Service           2
+4  Customer Service           1
+5           Finance           2
+6        Operations           2
+7       Engineering           2
+8         Executive           2
 9             Sales           4
 ```
 
