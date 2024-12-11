@@ -23,7 +23,7 @@ def test_3():
 	assert all(question3() == ans)
 
 def test_4():
-	d = {'DEPARTMENT': ['Management', 'Supply Chain', 'IT', 'Marketing', 'Human Resources', 'Customer Service', 'Finance', 'Operations', 'Engineering', 'Executive', 'Sales'], 'WORKER_NUM': [1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 4]}
+	d = {'DEPARTMENT': ['Supply Chain', 'IT', 'Marketing', 'Human Resources', 'Customer Service', 'Finance', 'Operations', 'Engineering', 'Executive', 'Sales'], 'WORKER_NUM': [1, 1, 1, 1, 1, 2, 2, 2, 3, 4]}
 	ans = pd.DataFrame(data=d)
 	ans = ans[['DEPARTMENT','WORKER_NUM']]
 	assert all(question4() == ans)

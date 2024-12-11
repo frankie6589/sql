@@ -126,7 +126,7 @@ print(question3())
 5           Finance           2
 6        Operations           2
 7       Engineering           2
-8         Executive           2
+8         Executive           3
 9             Sales           4
 '''
 
